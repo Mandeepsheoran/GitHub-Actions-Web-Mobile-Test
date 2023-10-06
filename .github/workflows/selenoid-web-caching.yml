@@ -1,8 +1,6 @@
 name: Web test in Selenoid with caching
 
 on:
- push:
-  branches: main
  workflow_dispatch:
 
 jobs:
