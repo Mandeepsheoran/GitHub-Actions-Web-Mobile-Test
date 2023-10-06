@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: daily    # Value can be : daily, weekly, monthly
       time: "12:12"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 10     # Maximum 10 PR at a time
     commit-message:
       prefix: "mvn"
     ignore:
