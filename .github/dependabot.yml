@@ -4,16 +4,16 @@ updates:
     directory: "/"
     schedule:
       interval: daily    # Value can be : daily, weekly, monthly
-      time: "12:04"
+      time: "12:12"
     open-pull-requests-limit: 10
     commit-message:
       prefix: "mvn"
     ignore:
-      - dependency-name: "selenium-java"
+      - dependency-name: "org.seleniumhq.selenium:selenium-java"
         versions: ["4.x"]
-      - dependency-name: "webdrivermanager"
-      - dependency-name: "java-client"
+      - dependency-name: "io.github.bonigarcia:webdrivermanager"
+      - dependency-name: "io.appium:java-client"
         versions: ["8.x"]
-      - dependency-name: "guava"
+      - dependency-name: "com.google.guava:guava"
     reviewers:
       - "Mandeepsheoran"
