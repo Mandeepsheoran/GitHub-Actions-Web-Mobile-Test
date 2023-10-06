@@ -1,0 +1,32 @@
+name: downstream repository dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'name'
+        required: true
+  repository_dispatch:
+    types: [ my-event ]
+
+jobs:
+  build:
+    name: run-workflow
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Pull code from workspace to the runner
+      uses: actions/checkout@v2
+      timeout-minutes: 10
+
+    - name: Setup Java 17
+      uses: actions/setup-java@v1
+      timeout-minutes: 10
+      with:
+          java-version: 17
+
+    - name: Run test with Maven
+      timeout-minutes: 10
+      run: |
+         mvn -v 
+         mvn clean install -Pweb-testng
