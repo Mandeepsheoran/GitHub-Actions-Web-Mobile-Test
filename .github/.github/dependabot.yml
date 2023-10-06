@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: maven
+    directory: "/"
+    schedule:
+      interval: daily    # Value can be : daily, weekly, monthly
+      time: "11:57"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "mvn"
+    ignore:
+      - dependency-name: "selenium-java"
+        versions: ["4.x"]
+      - dependency-name: "webdrivermanager"
+      - dependency-name: "java-client"
+        versions: ["8.x"]
+      - dependency-name: "guava"
+    reviewers:
+      - "Mandeepsheoran"
