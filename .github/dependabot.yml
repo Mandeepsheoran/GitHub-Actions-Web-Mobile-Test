@@ -4,7 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: daily    # Value can be : daily, weekly, monthly
-      time: "12:34"
+      time: "12:38"
     open-pull-requests-limit: 10     # Maximum 10 PR at a time
     commit-message:
       prefix: "mvn"
